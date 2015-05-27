@@ -6,6 +6,7 @@ A cover letter template creater that allows the user (normally a job seeker, red
 or (still mulling it over)
 
 Collaborate
+
 30 Second Pitch
 
 A site that developers and designers can use to get feed back from project mangers, marketers, lawyers and other workers involved in the business side of tech on project already in development. 
