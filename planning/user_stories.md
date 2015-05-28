@@ -1,6 +1,7 @@
 # User Stories
 
 CoverCreate
+
 -As a job seeker, I want to create a template for cover letters I plan on sending in the future.
 
 -As a job seeker, I want to be able to use the template by filling in the appropriate information (address, salutation etc. madlib style).  
