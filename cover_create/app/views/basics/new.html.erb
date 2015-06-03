@@ -1,0 +1,65 @@
+<%= render 'layouts/heading' %>
+<h2>Refferal Letter</h2>
+
+<div class="all-content">
+  <div class="standard-side">
+    <div class="basic">
+      <% @basics.each do |basic| %>
+        <h3>Basic Info</h3>
+        <p><%= basic.yname %></p>
+        <p><%= basic.ycity %></p>
+        <p><%= basic.yphone %></p>
+        <p><%= basic.yemail %></p>
+      <% end %>
+    </div>
+
+
+    <div class= "companies">
+      <% @company.each do |company| %>
+        <h3>Company Info</h3>
+        <p><%= company.cname %></p>
+        <p><%= company.ccity %></p>
+        <p><%= company.cphone %></p>
+        <p><%= company.cemail %></p>
+      <% end %>
+    </div>
+  </div>
+
+    <div class="letter-content">
+      <% @content.each do |content| %>
+        <h3><span class= "secondary-color2">Main Content</span></h3>
+        <p><%= content.date %></p>
+        <p><%= content.POCfirstname + content.POClastname %></p>
+        <p><%= content.POCtitle %></p>
+        <p>(Dear Ms./Mrs./Mr.)</p>
+        <p>I was recently made aware of a job opportunity at
+          <% @company.each do |company| %>
+            <%= company.cname %>
+          <% end %> by <%= content.reference %>. I was excited to learn about this position because <%= content.position_info %>. I believe that I could be the perfect candidate for the position because <%= content.skills %>. Thank you for taking the time to go over my credentials, I hope to get the chance to meet with you soon.
+        </p>
+
+        <p>Sincerely yours/Yours Truly/Best Wishes</p>
+
+        <% @basics.each do |basic|%>
+        <p><%= basic.yname %></p>
+        <% end %>
+
+        <div class= "centered-button2">
+          <button class="to-new"><a href = "/basics/:id">Customize All</a></button>
+        </div>
+      <% end %>
+
+    </div>
+</div>
+
+<!-- create_table "contents", force: :cascade do |t|
+  t.string   "date"
+  t.string   "POClastname"
+  t.string   "POCfirstname"
+  t.string   "POCtitle"
+  t.string   "reference"
+  t.text     "position_info"
+  t.text     "skills"
+  t.datetime "created_at",    null: false
+  t.datetime "updated_at",    null: false
+end -->

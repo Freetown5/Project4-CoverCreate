@@ -7,4 +7,11 @@ var Basic = Backbone.Model.extend({
   }
 });
 
-// var instructions = new BasicInfoModel({yname:"Your Name", ycity:"Your City", yphone:"Your Phone #:", yemail:"Your E-mail address:"})
+var Company = Backbone.Model.extend({
+  defaults:{
+    cname:'',
+    ccity:'',
+    cphone:'',
+    cemail:''
+  }
+});
