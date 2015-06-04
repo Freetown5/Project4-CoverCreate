@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150602161351) do
+ActiveRecord::Schema.define(version: 20150604150418) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,20 +21,12 @@ ActiveRecord::Schema.define(version: 20150602161351) do
     t.text     "ycity"
     t.string   "yphone"
     t.string   "yemail"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "companies", force: :cascade do |t|
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "cphone"
     t.string   "cname"
     t.text     "ccity"
-    t.string   "cphone"
     t.string   "cemail"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "contents", force: :cascade do |t|
     t.string   "date"
     t.string   "POClastname"
     t.string   "POCfirstname"
@@ -42,8 +34,6 @@ ActiveRecord::Schema.define(version: 20150602161351) do
     t.string   "reference"
     t.text     "position_info"
     t.text     "skills"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
   end
 
 end

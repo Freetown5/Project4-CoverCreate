@@ -4,62 +4,60 @@
 <div class="all-content">
   <div class="standard-side">
     <div class="basic">
-      <% @basics.each do |basic| %>
         <h3>Basic Info</h3>
-        <p><%= basic.yname %></p>
-        <p><%= basic.ycity %></p>
-        <p><%= basic.yphone %></p>
-        <p><%= basic.yemail %></p>
-      <% end %>
+        <%= form_for @basics do |f| %>
+
+        <p>Your Name:
+        <%= f.text_field :yname %></p>
+
+        <p>Your City/State/Zip:
+        <%= f.text_field :ycity %></p>
+
+        <p>Your Phone:
+        <%= f.text_field :yphone %></p>
+
+        <p>Your Email:
+        <%= f.text_field :yemail %></p>
+
     </div>
 
-
     <div class= "companies">
-      <% @company.each do |company| %>
         <h3>Company Info</h3>
-        <p><%= company.cname %></p>
-        <p><%= company.ccity %></p>
-        <p><%= company.cphone %></p>
-        <p><%= company.cemail %></p>
-      <% end %>
+        <p>Company Name:
+        <%= f.text_field :cname %></p>
+
+        <p>Company City/State/Zip
+        <%= f.text_field :ccity %></p>
+
+        <p>Company Phone
+        <%= f.text_field :cphone %></p>
+
+        <p>Company E-mail
+        <%= f.text_field :cemail %></p>
+
     </div>
   </div>
 
     <div class="letter-content">
-      <% @content.each do |content| %>
         <h3><span class= "secondary-color2">Main Content</span></h3>
-        <p><%= content.date %></p>
-        <p><%= content.POCfirstname + content.POClastname %></p>
-        <p><%= content.POCtitle %></p>
-        <p>(Dear Ms./Mrs./Mr.)</p>
+        <p>Date: <%= f.text_field :date %></p>
+        <p>Point of Contact first name: <%= f.text_field :POCfirstname %> LastName: <%= f.text_field :POClastname %></p>
+        <p>Dummy Data</p>
+        <p>(Dear Ms./Mrs./Mr.) Point of Contact last name: <%= f.text_field :POClastname %></p>
         <p>I was recently made aware of a job opportunity at
-          <% @company.each do |company| %>
-            <%= company.cname %>
-          <% end %> by <%= content.reference %>. I was excited to learn about this position because <%= content.position_info %>. I believe that I could be the perfect candidate for the position because <%= content.skills %>. Thank you for taking the time to go over my credentials, I hope to get the chance to meet with you soon.
+            "Company Name"
+          by <em><span class="secondary-color">reference:</span></em><%= f.text_field :reference %>. I was excited to learn about this position because <em><span class="secondary-color">relavent position related information:</span></em><%= f.text_field :position_info %>. I believe that I could be the perfect candidate for the position because <em><span class="secondary-color">relevant skills:</span></em><%= f.text_field :skills %>. Thank you for taking the time to go over my credentials, I hope to get the chance to meet with you soon.
         </p>
 
-        <p>Sincerely yours/Yours Truly/Best Wishes</p>
 
-        <% @basics.each do |basic|%>
-        <p><%= basic.yname %></p>
-        <% end %>
+        <p>Sincerely yours/Yours Truly/Best Wishes</p>
+        <p>"Your Name"</p>
 
         <div class= "centered-button2">
-          <button class="to-new"><a href = "/basics/:id">Customize All</a></button>
+          <%= f.submit %>
+          <!-- </button><button class="to-new"><a href = "/basics/:id">Customize All</a></button> -->
         </div>
-      <% end %>
+        <% end %>
 
     </div>
 </div>
-
-<!-- create_table "contents", force: :cascade do |t|
-  t.string   "date"
-  t.string   "POClastname"
-  t.string   "POCfirstname"
-  t.string   "POCtitle"
-  t.string   "reference"
-  t.text     "position_info"
-  t.text     "skills"
-  t.datetime "created_at",    null: false
-  t.datetime "updated_at",    null: false
-end -->

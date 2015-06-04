@@ -9,11 +9,3 @@
 basics = Basic.create([
   {yname:"(Your Name)" , ycity:"(Your City, State, and ZipCode)" , yphone:"(Your Phone #)" , yemail:"(Your E-mail)"}
   ]);
-
-companies = Company.create([
-  {cname:"(Company Name)" , ccity:"(Company City, State and ZipCode)", cphone:"(Company Phone #)" , cemail:"(Company E-mail)"}
-  ]);
-
-contents = Content.create([
-  {date:"", POClastname:"(Point of Contact Last Name)", POCfirstname:"(Point of Contact First Name)", POCtitle:"(Point of Contact Title)", reference:"(Name of Reference)", position_info:"(Relavant position info)", skills:"(Relavant Skills)"}
-  ])

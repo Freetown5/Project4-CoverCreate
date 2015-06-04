@@ -8,15 +8,12 @@ class BasicsController < ApplicationController
     end
 
     def new
-      @basics = Basic.all
-      @company = Company.all
-      @content = Content.all
-      @basic = Basic.new
+      @basics = Basic.new
     end
 
     def create
       @basics = Basic.create!(basic_params)
-      # redirect_to(@job_seeker)
+       redirect_to(@basics)
 
     #   @job_seeker = JobSeeker.find(params[:id])
     #   @interviewer = Interviewer.create!(interviewer_params)
@@ -24,7 +21,7 @@ class BasicsController < ApplicationController
     end
 
     def show
-      @basic = Basic.find(params[:id])
+      @basics = Basic.find(params[:id])
       # render :show
     end
 
@@ -45,7 +42,7 @@ class BasicsController < ApplicationController
     end
 
     def basic_params
-      return params[:basics].permit(:yname, :ycity, :yphone, :yemail)
+      return params[:basic].permit(:yname, :ycity, :yphone, :yemail, :cname, :ccity, :cphone, :cemail, :date, :POClastname, :POCfirstname, :POCtitle, :reference, :position_info, :skills)
     end
 
   end
