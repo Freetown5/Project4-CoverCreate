@@ -1,0 +1,35 @@
+<%= render 'layouts/heading' %>
+<h2>All Cover Letters</h2>
+
+<div class="all-entries">
+  <table>
+      <tr>
+          <th><p>Send Date</p></th>
+          <th><p>Company Name</p></th>
+          <th><p>Company City</p></th>
+          <th><p>Point of Contact Title</p></th>
+          <th><p>Point of Contact Name</p></th>
+          <th><p>Reference</p></th>
+          <th><p>Position Information</p></th>
+          <th><p>Skills</p></th>
+          <th><p>Edit</p></th>
+      </tr>
+    <% @basics.each do |basic| %>
+      <tr>
+        <td><p><%= basic.date %></p></td>
+        <td><p><%= basic.cname %></p></td>
+        <td><p><%= basic.ccity %></p></td>
+        <td><p><%= basic.POCtitle %></p></td>
+        <td><p><%= basic.POCfirstname %><%= basic.POClastname %></p></td>
+        <td><p><%= basic.reference %></p></td>
+        <td><p><%= basic.position_info %></p></td>
+        <td><p><%= basic.skills %></p></td>
+        <td><button class="to-new"><a href="/basics/<%= basic.id %>/edit">Edit</a></button></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<div class= "centered-button3">
+  <button class="to-new"><a href="/basics/new">Create new</a></button>
+</div>

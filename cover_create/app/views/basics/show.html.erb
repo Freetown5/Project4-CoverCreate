@@ -8,9 +8,9 @@
   <%= @basics.yemail %></br></p>
 
   <p><%= @basics.cname %></br>
-  <%= @basics.ccity %></br>
-  <%= @basics.cphone %></br>
-  <%= @basics.cemail %></br></p>
+  <%= @basics.ccity %><br>
+  <%= @basics.cphone %><br>
+  <%= @basics.cemail %><br></p>
 
   <p><%= @basics.date %></p>
   <p><%= @basics.POCfirstname %><%= @basics.POClastname %></br>
@@ -26,4 +26,10 @@
 
   <p><%= @basics.yname %></p>
 
+</div>
+
+<div class= "centered-button2">
+  <button class="to-new"><a href="//pdfcrowd.com/url_to_pdf/">Save to PDF</a></button>
+  <button class="to-new"><a href="/basics">All letters</a></a></button>
+  <button class="to-new"><a href="/basics/<%= @basics.id %>/edit">Edit</a></button>
 </div>
