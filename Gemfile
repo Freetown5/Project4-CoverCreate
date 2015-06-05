@@ -5,6 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.1'
 # Use postgresql as the database for Active Record
 
+gem 'figaro'
+
 gem 'pdfcrowd'
 
 gem 'pg'
