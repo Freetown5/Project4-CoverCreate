@@ -1,4 +1,35 @@
-<%= @basics.yname %>
-<%= @basics.ycity %>
-<%= @basics.yphone %>
-<%= @basics.yemail %>
+<%= render 'layouts/heading' %>
+
+<h2>Finished Document</h2>
+<div class ="finished-page">
+  <p><%= @basics.yname %></br>
+  <%= @basics.ycity %></br>
+  <%= @basics.yphone %></br>
+  <%= @basics.yemail %></br></p>
+
+  <p><%= @basics.cname %></br>
+  <%= @basics.ccity %><br>
+  <%= @basics.cphone %><br>
+  <%= @basics.cemail %><br></p>
+
+  <p><%= @basics.date %></p>
+  <p><%= @basics.POCfirstname %><%= @basics.POClastname %></br>
+  <%= @basics.POCtitle %></p>
+
+  <p>Dear Mr.<%= @basics.POClastname %>:</p>
+
+  <p>
+  I was recently made aware of a job opportunity at <%= @basics.cname %> by <%= @basics.reference %>. I was excited to learn about this position because <%= @basics.position_info %>. I believe that I could be the perfect candidate for the position because <%= @basics.skills %>. Thank you for taking the time to go over my credentials, I hope to get the chance to meet with you soon.
+  </p>
+
+  <p>Sincerely Yours,</p>
+
+  <p><%= @basics.yname %></p>
+
+</div>
+
+<div class= "centered-button2">
+  <button class="to-new"><a href="//pdfcrowd.com/url_to_pdf/">Save to PDF</a></button>
+  <button class="to-new"><a href="/basics">All letters</a></a></button>
+  <button class="to-new"><a href="/basics/<%= @basics.id %>/edit">Edit</a></button>
+</div>
