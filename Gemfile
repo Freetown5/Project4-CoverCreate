@@ -9,7 +9,9 @@ gem 'dot_secrets', github: 'rono23/dot_secrets'
 
 gem 'pdfcrowd'
 
-gem 'rails_12factor', group: :production
+group :production do
+  gem 'rails_12factor'
+end
 
 gem 'pg'
 # Use SCSS for stylesheets
