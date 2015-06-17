@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150604150418) do
+ActiveRecord::Schema.define(version: 20150617170917) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,19 +21,54 @@ ActiveRecord::Schema.define(version: 20150604150418) do
     t.text     "ycity"
     t.string   "yphone"
     t.string   "yemail"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "cphone"
     t.string   "cname"
     t.text     "ccity"
     t.string   "cemail"
+  end
+
+  create_table "inquiries", force: :cascade do |t|
     t.string   "date"
-    t.string   "POClastname"
-    t.string   "POCfirstname"
-    t.string   "POCtitle"
+    t.string   "poc_first_name"
+    t.string   "poc_last_name"
+    t.string   "ytitle"
+    t.string   "position_type"
+    t.string   "industry_type"
+    t.text     "specialty"
+    t.string   "hard_skills"
+    t.string   "relevant_skills"
+    t.text     "culture"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "open_applies", force: :cascade do |t|
+    t.string   "date"
+    t.string   "poc_first_name"
+    t.string   "poc_last_name"
+    t.string   "ytitle"
+    t.string   "desired_position"
+    t.string   "industry_type"
+    t.string   "position_found"
+    t.string   "open_position"
+    t.text     "position_info"
+    t.text     "relevant_skills"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "referrals", force: :cascade do |t|
+    t.string   "date"
+    t.string   "poc_first_name"
+    t.string   "poc_last_name"
+    t.string   "poc_title"
     t.string   "reference"
     t.text     "position_info"
     t.text     "skills"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
 end

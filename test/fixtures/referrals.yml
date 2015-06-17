@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: MyString
+  poc_first_name: MyString
+  poc_last_name: MyString
+  poc_title: MyString
+  reference: MyString
+  position_info: MyText
+  skills: MyText
+
+two:
+  date: MyString
+  poc_first_name: MyString
+  poc_last_name: MyString
+  poc_title: MyString
+  reference: MyString
+  position_info: MyText
+  skills: MyText
